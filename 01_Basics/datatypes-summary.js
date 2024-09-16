@@ -42,3 +42,26 @@ console.log(typeof myfunction)
 
 //typeof of null\is  object
 //return type of non primitive object function
+
+//++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack (used in Primitive) , Heap(used in Non-Primitive)
+//stack give copy of variable
+//head give reference of variable
+
+let myYoutubeName = "sourav.com"
+
+let anotherName = myYoutubeName
+anotherName = "sonu"
+console.log(myYoutubeName)
+console.log(anotherName)
+
+let userOne = {
+    email:"user@google.com",
+    upi:"user@ybl"
+}
+
+let userTwo = userOne;
+userTwo.email = "hitesh@google.com"
+console.log(userOne.email)
+console.log(userTwo.email)
