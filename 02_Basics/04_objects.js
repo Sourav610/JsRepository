@@ -39,10 +39,44 @@ const users = [
 ]
 
 users[1].email
-console.log(tinderUser)
+// console.log(tinderUser)
 
-console.log(Object.keys(tinderUser))
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser))
+// console.log(Object.keys(tinderUser))
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser))
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'))
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'))
+
+
+//************************DESTRUCTURING OBJECT */
+
+const course = {
+    coursename:"js in hindi",
+    price:"999",
+    courseInstructor:"sourav"
+}
+
+// course.coursename
+
+// const {courseInstructor} = course
+const {courseInstructor: instructor} = course
+
+console.log(instructor);
+
+// const navbar = ({company})  =>{ //use in react
+
+// }
+
+//api json data
+
+// {
+//     "name":"Sourav",
+//     "coursename":"learning js",
+//     "price":"free"
+// }
+
+//api data can be array format also
+// [
+//     {},
+//     {}
+// ]
