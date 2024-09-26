@@ -35,4 +35,34 @@ function loginUserMessage(username = "sam"){ //default value
     return `${username} just logged in`
 }
 
-console.log(loginUserMessage())
+// console.log(loginUserMessage())
+
+function calculateCartPrice(val1, val2,...num1){  //it also known as rest operator.
+    return num1
+}
+
+console.log(calculateCartPrice(200,400,500,600))
+
+const user = {
+    username: "sourav",
+    price: 299
+}
+
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`)
+}
+
+handleObject(user)
+handleObject({
+    username:"sam",
+    price:399
+})
+
+const myNewArray = [200, 400, 234,988]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+// console.log(returnSecondValue(myNewArray))
+console.log(returnSecondValue([2343,566]))
