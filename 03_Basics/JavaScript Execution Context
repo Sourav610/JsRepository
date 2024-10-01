@@ -1,0 +1,27 @@
+First javascript code create Global Execution Context.
+Then it create Function Execution Context.
+Eval Execution Context
+
+--> how it is executed
+1st phase - memory creation phase -- here space allocated for every variable and function
+2nd phase - execution phase
+
+i> Global Execution -> store in this
+ii> memory phase -- val1 --> undefine
+                    val2 --> undefine
+                    add num --> definition
+                    result1 -> undefine
+                    result2 --> undefine
+iii> Execution phase -- val1 = 10,
+                        val2 = 5
+                        addNum --> create another execution context with new variable environment(memory phase) + execution thread
+                        Memory phase-->                          execution Context -->
+                                        val1 -> undefine                            num1 -> 10
+                                        val2 -->undefine                            num2 -> 5
+                                        total --> undefine                          total -> 15 it return back to global execution and then deleted
+
+same way it repeted for all function
+
+
+===> Call stack
+-> it work like push , pop operation in stack and use lifo concept
