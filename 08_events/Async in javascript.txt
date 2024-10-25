@@ -1,0 +1,7 @@
+Javascript is a synchronous and single threaded.
+Execution context - execute code line by line.
+                - Each operation wait for last one to complete before executing.
+
+Blocking code - block the flow of program. ex - read file synchronusly
+Non Blocking code - Does not block Execution ex- read file asynchronusly
+
