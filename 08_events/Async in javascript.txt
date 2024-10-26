@@ -5,3 +5,5 @@ Execution context - execute code line by line.
 Blocking code - block the flow of program. ex - read file synchronusly
 Non Blocking code - Does not block Execution ex- read file asynchronusly
 
+Async example - setTimeout,setInterval, etc.
+
