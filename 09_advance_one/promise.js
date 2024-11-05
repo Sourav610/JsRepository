@@ -19,3 +19,36 @@ new Promise(function(resolve,reject){
 }).then(function(){
     console.log("Async 2 resolved")
 })
+
+
+const promiseThree = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        resolve({username:"chai",email:"chai@example.com"})
+    },1000)
+})
+
+promiseThree.then(function(user){
+    console.log(user)
+})
+
+
+const promiseFour = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error = false
+        if(!error){
+            resolve({username:"sourav",Password:"234"})
+        }
+        else{
+            reject('Error: something went wrong')
+        }
+    },1000)
+})
+
+promiseFour.then((user)=>{
+    console.log(user);
+    return user.username
+}).then((username1)=>{
+    console.log(username1)
+}).catch(function(error){
+    console.log(error)
+}).finally(() => console.log("The promise is either resolved or rejected"))
