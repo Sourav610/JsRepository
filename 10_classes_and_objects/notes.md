@@ -24,3 +24,7 @@ Abstraction
 Encapsulation
 Inheritance
 Polymorphism 
+
+- javascript has a default behaviour called as prototypal behaviour .
+
+- all constructor, inheritance comes through prototype.
