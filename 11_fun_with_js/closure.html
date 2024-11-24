@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="Green">Green</button>
+</body>
+
+<script>
+
+//lexical scope - giving access of parent variable to child.
+
+// function init(){
+//     let name = "Mozilla";
+//     function displayName(){
+//         console.log(name);
+//     }
+//     displayName();
+// }
+
+// init();
+
+
+// function outer(){
+//     let username = "sourav"
+//     function inner(){
+//         let secret = "my123"
+//         console.log("inner", username)
+//     }
+
+//     function innerTwo(){
+//         console.log("innerTwo", username);
+//         console.log(secret)
+//     }
+//     inner()
+//     innerTwo()
+// }
+// outer();
+
+
+//closure - here we return the whole reference of a function.
+
+function makeFun(){
+    const name = "Mozilla";
+    function displayName(){
+        console.log(name);
+    }
+    return displayName;
+}
+
+const myFunc = makeFun();
+myFunc();
+</script>
+
+<script>
+// document.getElementById("orange").onclick = function(){
+//     document.body.style.backgroundColor = `orange`
+// }
+// document.getElementById("Green").onclick = function(){
+//     document.body.style.backgroundColor = `green`
+// }
+
+function clickHandler(color){
+    // document.body.style.backgroundColor = `${color}`
+    return function(){
+        document.body.style.backgroundColor = `${color}`
+    }
+}
+
+document.getElementById('orange').onclick = clickHandler("orange")
+document.getElementById('Green').onclick = clickHandler('green');
+</script>
+</html>
